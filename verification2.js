@@ -1,3 +1,21 @@
+/*
+    Project 1-06-3
+    
+    Author: Jacob Hobeck
+    Date:   8.20.18
+    
+    Filename: verification2.js
+    
+    This form is applicable to the following files:
+    
+    request.html
+    serviceReq.html
+    
+    Since the form is extensive, this is how the form file pathways work for the form:
+    
+    request.html -> serviceReq.html -> thanksReq.html
+*/
+
 window.addEventListener("load", function(){
   document.getElementById("donePart2").onclick = validateEverythingPart2;
 })

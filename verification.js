@@ -1,3 +1,24 @@
+/*
+    Project 1-06-3
+    
+    Author: Jacob Hobeck
+    Date:   8.20.18
+    
+    Filename: verification.js
+    
+    This form is applicable to the following files:
+    
+    fieldWork.html
+    offWork.html
+    signUp.html
+    volunteer.html
+    
+    Since the form is extensive, this is how the form file pathways work for the 2 forms:
+    
+    signUp.html -> thanksSign.html
+    volunteer.html -> fieldWork.html || offWork.html -> thanksVol.html
+*/
+
 window.addEventListener("load", function(){
   document.getElementById("done").onclick = validateEverything;
 })
