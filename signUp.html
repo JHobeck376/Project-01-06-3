@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ViaReach | Volunteer</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="volunteer.css">
+    <link rel="shortcut icon" href="imgs/fav.ico" type="image/x-icon">
+
+  </head>
+  <body>
+    <!-- nav -->
+    <nav class="navbar" id="navbar" style="background-color:black">
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a style="color:azure" class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a style="color:azure" class="nav-link" href="story.html">Story</a></li>
+        <li class="nav-item"><a style="color:azure" class="nav-link" href="volunteer.html">Volunteer</a></li>
+        <li class="nav-item"><a style="color:azure" class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="container-fluid login-bar">
+      <div id="toprow" class="row">
+        <div id="logo" class="col-sm-2 col-md-2">
+          <img class="img-fluid" src="imgs/logo.png" alt="logo" id="logoSmall">
+        </div>
+
+        <!-- <div id="login" class="col-sm-10 col-md-10 "> -->
+        <!-- <form action="">
+              <div class="form-group col-sm-2 col-md-4"> -->
+
+        <div class="form-group col-sm-3 col-md-2">
+          <label for="Username" class="">Username</label>
+          <input type="text" name="Username" id="" class="form-control">
+        </div>
+        <div class="form-group col-sm-3 col-md-2">
+          <label for="Password" class="">Password</label>
+          <input type="text" name="Password" id="" class="form-control">
+        </div>
+
+        <div class="form-group col-sm-2 col-md-2 col-lg-1 align-self-center">
+          <a href="request.html">
+            <button type="button" class="form-control btn btn-secondary ">login</button>
+          </a>
+        </div>
+        <!-- </div> -->
+      </div>
+    </div>
+    <!-- </div> -->
+    <div class="container">
+      <article class="">
+        <form class="" action="thanksSign.html" method="post">
+          <br>
+          <h3>Please fill out the form below</h3>
+          <!-- First Name Inputbox -->
+          <label for="fName">First Name</label>
+          <input type="text" name="fName" id="fName" placeholder="John" required></br>
+          <!-- Last Name Inputbox -->
+          <label for="lName">Last Name</label>
+          <input type="text" name="lName" id="lName" placeholder="Doe" required></br>
+          <!-- Age Spinner -->
+          <label for="age">Please select your age</label></br>
+          <input type="number" name="age" id="age" step="1" min="16" max="100" required></br></br>
+          <label for="">Do you have an inability to:</label>
+          <h5 id="walk">Walk</h5>
+          <fieldset>
+            <label for="cRYes">Yes</label>
+            <input type="radio" name="cRec" id="cRecYes" value="yes">
+            <label for="cRNo">No</label>
+            <input type="radio" name="cRec" id="cRecNo" value="no">
+          </fieldset>
+          <h5 id="drive">Drive</h5>
+          <fieldset>
+            <label for="cRYes">Yes</label>
+            <input type="radio" name="drive" id="cRecYes" value="yes">
+            <label for="cRNo">No</label>
+            <input type="radio" name="drive" id="cRecNo" value="no">
+          </fieldset>
+          <h5 id="groceries">Get Groceries</h5>
+          <fieldset>
+            <label for="cRYes">Yes</label>
+            <input type="radio" name="groceries" id="cRecYes" value="yes">
+            <label for="cRNo">No</label>
+            <input type="radio" name="groceries" id="cRecNo" value="no">
+          </fieldset>
+          <h5 id="navigate">Navigate an Event</h5>
+          <fieldset>
+            <label for="cRYes">Yes</label>
+            <input type="radio" name="navigate" id="cRecYes" value="yes">
+            <label for="cRNo">No</label>
+            <input type="radio" name="navigate" id="cRecNo" value="no">
+          </fieldset>
+          <!-- Other Textarea -->
+          <label for="purpose">Do you have any disabilities that we have not thought of?</label></br>
+          <textarea name="purpose" id="purpose" rows="3" cols="40" placeholder="Please kindly inform us of how we can better help you."></textarea><br>
+          <!-- Complete Form -->
+          <input type="submit" name="done" id="done" value="Complete Form">
+        </form>
+    </article>
+    </div>
+
+    <footer style="background-color: #007bff; color: white;">
+
+        <hr>
+        <br>
+        <div class="container-fluid">
+          <div class="col-sm-12">
+            <section>
+              <div class="row">
+                <div class="col-md-4">
+                  <ul>
+                    <h6>ViaReach</h6>
+                    <li>ViaReach  &copy; 2018</li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Agency Resources</a></li>
+                  </ul>
+                </div>
+                <div class="col-md-4">
+                  <ul>
+                      <h6>Projects</h6>
+                      <li><a href="#">Future Developments</a></li>
+                      <li><a href="#">Merch</a></li>
+                      <li><a href="#">Little Hands &trade;</a></li>
+                  </ul>
+                </div>
+                <div class="col-md-4">
+                  <ul>
+                      <h6>Contact</h6>
+                      <li><a href="contact.html">Visit Contact Page</a></li>
+                      <li>12345 N 1st Ave</li>
+                      <li> Sun City, Arizona 85379</li>
+                  </ul>
+                </div>
+              </div>
+          </div>
+          <br>
+          <p id="footer" style="color:gainsboro;">Web Authors: | Yamilex Godinez | Jacob Hobeck | Grace Kelly </p>
+          <p id="footer"><a href="guide.html" style="color: orange">CLICK HERE FOR THE WEBSITE GUIDE</a></p>
+          </section>
+        </div>
+      </footer>
+    <script src="verification.js"></script>
+  </body>
+</html>
