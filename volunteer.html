@@ -106,6 +106,25 @@
           <label for="returnBox">Do you plan on returning?</label>
           <input type="checkbox" name="returnBox" id="returnBox">
           <h5>Please select which field of work best interests you.</h5>
+          <h2>Field Work</h2>
+        <!-- Office Work - Requests of Customers Online, Field - Reply to any requests, are you okay with this, yes or no(examples, groceries, driving, and other requests)  -->
+        <h3>Please Select Yes or No</h3>
+        <!-- Vehicle Radio Button -->
+        <label for="transp">Do you have a mode of transportation that can be used to transport people?</label>
+        <fieldset>
+          <label for="transpYes">Yes</label>
+          <input type="radio" name="transp" id="transpYes" value="yes">
+          <label for="transpNo">No</label>
+          <input type="radio" name="transp" id="transpNo" value="no">
+        </fieldset>
+        <h3>Please carefully read the agreement, then check the box if you agree</h3>
+        <label for="agree">As it stands right now, our field work is not very extensive. We use our volunteers to provide services <br> necessary for those in need. As more businesses become partnered, more field work will <br> become unavailable. Jobs will be tasks such as taking someone from point A to point B, buying groceries, or <br> wheeling someone out in public. If these tasks sound applicable to your interests, please check the box.</label><br>
+        <input type="checkbox" name="agree" id="agree"><br>
+        <!-- Question box -->
+        <label for="quests">Do you have any Questions? Please type them in the box below.</label><br>
+        <textarea name="quests" id="quests" rows="6" cols="60" placeholder="Please use complete sentences, though ask as many questions as you need to obtain clarity."></textarea><br>
+        <!-- Complete Form -->
+        <input type="submit" name="done" id="done" value="Complete Form">
           <!-- These buttons send the user information to two different places. This is done by the action of the form and the formaction attribute, which overrides the form action and sends the information to its own designated location. -->
           <input type="submit" name="done" id="done" value="Office Work">
           <input type="submit" name="done" id="done" value="Field Work" formaction="fieldWork.html">

@@ -175,18 +175,3 @@ function validateRef3Num() {
 }
 
 
-
-// var formElements = $('form').find('input');
-// $.each(formElements, function(index, elm){
-//     switch (elm.type){
-//       case 'text':
-//         if(!elm.value){
-//           alert($(elm).attr('data-fname'));
-//           $(elm).css('border-color', 'red');
-//         }
-//         break;
-//       case 'date':
-//
-//         break;
-//     }
-// });
