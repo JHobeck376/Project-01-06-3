@@ -17,11 +17,21 @@
     
     signUp.html -> thanksSign.html
     volunteer.html -> fieldWork.html || offWork.html -> thanksVol.html
+    
+    This JavaScript file had no comments to begin with, so the comments and everything imcompused by the comments are what are new
 */
 
-window.addEventListener("load", function(){
-  document.getElementById("done").onclick = validateEverything;
-})
+// on load event listeners
+if (window.addEventListener){
+ window.addEventListener("load", formSetUp, false);   
+} else if (window.attachEvent){
+    window.attachEvent("onload", formSetUp);
+}
+
+// function to set up the form
+function formSetUp() {
+    initialResponsive();
+}
 
 function validateEverything() {
   validateFirstName();
@@ -40,8 +50,9 @@ function validateEverything() {
   validateRef3Num();
 }
 
+// function to validate the form basics
 
-
+// these five functions below are in an in progress change. They are being combined into more purposeful functions
 function validateFirstName() {
   var nameFirst = document.getElementById("fName");
   if(nameFirst.validity.valueMissing){
@@ -174,4 +185,11 @@ function validateRef3Num() {
   }
 }
 
-
+// function to make the form responsive
+function initialResponsive() {
+    var offWork = document.getElementById("offWork");
+    var fieldWork = document.getElementById("fieldWork");
+    var currentWork;
+    offWork.style.display = "none";
+    fieldWork.style.display = "none";
+}
