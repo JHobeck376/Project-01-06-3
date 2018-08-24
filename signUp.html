@@ -1,105 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ViaReach | Volunteer</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" />
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="volunteer.css">
     <link rel="shortcut icon" href="fav.ico" type="image/x-icon">
 
-  </head>
-  <body>
+</head>
+
+<body>
     <!-- nav -->
     <nav class="navbar" id="navbar" style="background-color:black">
-      <ul class="nav nav-pills">
-        <li class="nav-item"><a style="color:azure" class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a style="color:azure" class="nav-link" href="story.html">Story</a></li>
-        <li class="nav-item"><a style="color:azure" class="nav-link" href="volunteer.html">Volunteer</a></li>
-        <li class="nav-item"><a style="color:azure" class="nav-link" href="contact.html">Contact</a></li>
-      </ul>
+        <ul class="nav nav-pills">
+            <li class="nav-item"><a style="color:azure" class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a style="color:azure" class="nav-link" href="story.html">Story</a></li>
+            <li class="nav-item"><a style="color:azure" class="nav-link" href="volunteer.html">Volunteer</a></li>
+            <li class="nav-item"><a style="color:azure" class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
     </nav>
 
     <div class="container-fluid login-bar">
-      <div id="toprow" class="row">
-        <div id="logo" class="col-sm-2 col-md-2">
-          <img class="img-fluid" src="logo.png" alt="logo" id="logoSmall">
-        </div>
+        <div id="toprow" class="row">
+            <div id="logo" class="col-sm-2 col-md-2">
+                <img class="img-fluid" src="logo.png" alt="logo" id="logoSmall">
+            </div>
 
-        <!-- <div id="login" class="col-sm-10 col-md-10 "> -->
-        <!-- <form action="">
+            <!-- <div id="login" class="col-sm-10 col-md-10 "> -->
+            <!-- <form action="">
               <div class="form-group col-sm-2 col-md-4"> -->
 
-        <div class="form-group col-sm-3 col-md-2">
-          <label for="Username" class="">Username</label>
-          <input type="text" name="Username" id="" class="form-control">
-        </div>
-        <div class="form-group col-sm-3 col-md-2">
-          <label for="Password" class="">Password</label>
-          <input type="text" name="Password" id="" class="form-control">
-        </div>
+            <div class="form-group col-sm-3 col-md-2">
+                <label for="Username" class="">Username</label>
+                <input type="text" name="Username" id="" class="form-control">
+            </div>
+            <div class="form-group col-sm-3 col-md-2">
+                <label for="Password" class="">Password</label>
+                <input type="text" name="Password" id="" class="form-control">
+            </div>
 
-        <div class="form-group col-sm-2 col-md-2 col-lg-1 align-self-center">
-          <a href="request.html">
-            <button type="button" class="form-control btn btn-secondary ">login</button>
-          </a>
+            <div class="form-group col-sm-2 col-md-2 col-lg-1 align-self-center">
+                <a href="request.html">
+                    <button type="button" class="form-control btn btn-secondary ">login</button>
+                </a>
+            </div>
+            <!-- </div> -->
         </div>
-        <!-- </div> -->
-      </div>
     </div>
     <!-- </div> -->
     <div class="container">
-      <article class="">
-        <form class="" action="thanksSign.html" method="post">
-          <br>
-          <h3>Please fill out the form below</h3>
-          <!-- First Name Inputbox -->
-          <label for="fName">First Name</label>
-          <input type="text" name="fName" id="fName" placeholder="John" required></br>
-          <!-- Last Name Inputbox -->
-          <label for="lName">Last Name</label>
-          <input type="text" name="lName" id="lName" placeholder="Doe" required></br>
-          <!-- Age Spinner -->
-          <label for="age">Please select your age</label></br>
-          <input type="number" name="age" id="age" step="1" min="16" max="100" required></br></br>
-          <label for="">Do you have an inability to:</label>
-          <h5 id="walk">Walk</h5>
-          <fieldset>
-            <label for="cRYes">Yes</label>
-            <input type="radio" name="cRec" id="cRecYes" value="yes">
-            <label for="cRNo">No</label>
-            <input type="radio" name="cRec" id="cRecNo" value="no">
-          </fieldset>
-          <h5 id="drive">Drive</h5>
-          <fieldset>
-            <label for="cRYes">Yes</label>
-            <input type="radio" name="drive" id="cRecYes" value="yes">
-            <label for="cRNo">No</label>
-            <input type="radio" name="drive" id="cRecNo" value="no">
-          </fieldset>
-          <h5 id="groceries">Get Groceries</h5>
-          <fieldset>
-            <label for="cRYes">Yes</label>
-            <input type="radio" name="groceries" id="cRecYes" value="yes">
-            <label for="cRNo">No</label>
-            <input type="radio" name="groceries" id="cRecNo" value="no">
-          </fieldset>
-          <h5 id="navigate">Navigate an Event</h5>
-          <fieldset>
-            <label for="cRYes">Yes</label>
-            <input type="radio" name="navigate" id="cRecYes" value="yes">
-            <label for="cRNo">No</label>
-            <input type="radio" name="navigate" id="cRecNo" value="no">
-          </fieldset>
-          <!-- Other Textarea -->
-          <label for="purpose">Do you have any disabilities that we have not thought of?</label></br>
-          <textarea name="purpose" id="purpose" rows="3" cols="40" placeholder="Please kindly inform us of how we can better help you."></textarea><br>
-          <!-- Complete Form -->
-          <input type="submit" name="done" id="done" value="Complete Form">
-        </form>
-    </article>
+        <article class="">
+            <form action="thanksSign.html" method="post" novalidate="novalidate">
+                <br>
+                <div id="errorDiv"></div>
+                <br>
+                <h3>Please fill out the form below</h3>
+                <!-- First Name Inputbox -->
+                <label for="fName">First Name</label>
+                <input type="text" name="fName" id="fName" placeholder="John" required>
+                </br>
+                <!-- Last Name Inputbox -->
+                <label for="lName">Last Name</label>
+                <input type="text" name="lName" id="lName" placeholder="Doe" required>
+                </br>
+                <!-- Age Spinner -->
+                <label for="age">Please select your age</label>
+                </br>
+                <select name="age" id="age">
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+                    <option value="32">32</option>
+                    <option value="33">33</option>
+                    <option value="34">34</option>
+                    <option value="35">35</option>
+                    <option value="36">36</option>
+                    <option value="37">37</option>
+                    <option value="38">38</option>
+                    <option value="39">39</option>
+                    <option value="40">40</option>
+                    <option value="41">41</option>
+                    <option value="42">42</option>
+                    <option value="43">43</option>
+                    <option value="44">44</option>
+                    <option value="45">45</option>
+                    <option value="46">46</option>
+                    <option value="47">47</option>
+                    <option value="48">48</option>
+                    <option value="49">49</option>
+                    <option value="50">50</option>
+                    <option value="51">51</option>
+                    <option value="52">52</option>
+                    <option value="53">53</option>
+                    <option value="54">54</option>
+                    <option value="55">55</option>
+                    <option value="56">56</option>
+                    <option value="57">57</option>
+                    <option value="58">58</option>
+                    <option value="59">59</option>
+                    <option value="60">60</option>
+                    <option value="61">61</option>
+                    <option value="62">62</option>
+                    <option value="63">63</option>
+                    <option value="64">64</option>
+                    <option value="65">65</option>
+                    <option value="66">66</option>
+                    <option value="67">67</option>
+                    <option value="68">68</option>
+                    <option value="69">69</option>
+                    <option value="70">70</option>
+                    <option value="71">71</option>
+                    <option value="72">72</option>
+                    <option value="73">73</option>
+                    <option value="74">74</option>
+                    <option value="75">75</option>
+                    <option value="76">76</option>
+                    <option value="77">77</option>
+                    <option value="78">78</option>
+                    <option value="79">79</option>
+                    <option value="80">80</option>
+                    <option value="81">81</option>
+                    <option value="82">82</option>
+                    <option value="83">83</option>
+                    <option value="84">84</option>
+                    <option value="85">85</option>
+                    <option value="86">86</option>
+                    <option value="87">87</option>
+                    <option value="88">88</option>
+                    <option value="89">89</option>
+                    <option value="90">90</option>
+                    <option value="91">91</option>
+                    <option value="92">92</option>
+                    <option value="93">93</option>
+                    <option value="94">94</option>
+                    <option value="95">95</option>
+                    <option value="96">96</option>
+                    <option value="97">97</option>
+                    <option value="98">98</option>
+                    <option value="99">99</option>
+                    <option value="100">100</option>
+                </select>
+                </br>
+                </br>
+                <label for="">Do you have an inability to:</label>
+                <h5 id="walk">Walk</h5>
+                <fieldset>
+                    <label for="cRYes">Yes</label>
+                    <input type="radio" name="cRec" id="cRecYes" value="yes">
+                    <label for="cRNo">No</label>
+                    <input type="radio" name="cRec" id="cRecNo" value="no">
+                </fieldset>
+                <h5 id="drive">Drive</h5>
+                <fieldset>
+                    <label for="cRYes">Yes</label>
+                    <input type="radio" name="drive" id="cRecYes" value="yes">
+                    <label for="cRNo">No</label>
+                    <input type="radio" name="drive" id="cRecNo" value="no">
+                </fieldset>
+                <h5 id="groceries">Get Groceries</h5>
+                <fieldset>
+                    <label for="cRYes">Yes</label>
+                    <input type="radio" name="groceries" id="cRecYes" value="yes">
+                    <label for="cRNo">No</label>
+                    <input type="radio" name="groceries" id="cRecNo" value="no">
+                </fieldset>
+                <h5 id="navigate">Navigate an Event</h5>
+                <fieldset>
+                    <label for="cRYes">Yes</label>
+                    <input type="radio" name="navigate" id="cRecYes" value="yes">
+                    <label for="cRNo">No</label>
+                    <input type="radio" name="navigate" id="cRecNo" value="no">
+                </fieldset>
+                <!-- Other Textarea -->
+                <label for="purpose">Do you have any disabilities that we have not thought of?</label>
+                </br>
+                <textarea name="purpose" id="purpose" rows="3" cols="40" placeholder="Please kindly inform us of how we can better help you."></textarea>
+                <br>
+                <!-- Complete Form -->
+                <input type="submit" name="done" id="done" value="Complete Form">
+            </form>
+        </article>
     </div>
 
     <footer style="background-color: #007bff; color: white;">
@@ -107,41 +204,42 @@
         <hr>
         <br>
         <div class="container-fluid">
-          <div class="col-sm-12">
-            <section>
-              <div class="row">
-                <div class="col-md-4">
-                  <ul>
-                    <h6>ViaReach</h6>
-                    <li>ViaReach  &copy; 2018</li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Agency Resources</a></li>
-                  </ul>
-                </div>
-                <div class="col-md-4">
-                  <ul>
-                      <h6>Projects</h6>
-                      <li><a href="#">Future Developments</a></li>
-                      <li><a href="#">Merch</a></li>
-                      <li><a href="#">Little Hands &trade;</a></li>
-                  </ul>
-                </div>
-                <div class="col-md-4">
-                  <ul>
-                      <h6>Contact</h6>
-                      <li><a href="contact.html">Visit Contact Page</a></li>
-                      <li>12345 N 1st Ave</li>
-                      <li> Sun City, Arizona 85379</li>
-                  </ul>
-                </div>
-              </div>
-          </div>
-          <br>
-          <p id="footer" style="color:gainsboro;">Web Authors: | Yamilex Godinez | Jacob Hobeck | Grace Kelly </p>
-          <p id="footer"><a href="guide.html" style="color: orange">CLICK HERE FOR THE WEBSITE GUIDE</a></p>
-          </section>
+            <div class="col-sm-12">
+                <section>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <ul>
+                                <h6>ViaReach</h6>
+                                <li>ViaReach &copy; 2018</li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Agency Resources</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <ul>
+                                <h6>Projects</h6>
+                                <li><a href="#">Future Developments</a></li>
+                                <li><a href="#">Merch</a></li>
+                                <li><a href="#">Little Hands &trade;</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <ul>
+                                <h6>Contact</h6>
+                                <li><a href="contact.html">Visit Contact Page</a></li>
+                                <li>12345 N 1st Ave</li>
+                                <li> Sun City, Arizona 85379</li>
+                            </ul>
+                        </div>
+                    </div>
+            </div>
+            <br>
+            <p id="footer" style="color:gainsboro;">Web Authors: | Yamilex Godinez | Jacob Hobeck | Grace Kelly </p>
+            <p id="footer"><a href="guide.html" style="color: orange">CLICK HERE FOR THE WEBSITE GUIDE</a></p>
+            </section>
         </div>
-      </footer>
-    <script src="verification.js"></script>
-  </body>
+    </footer>
+    <script src="verificationSign.js"></script>
+</body>
+
 </html>

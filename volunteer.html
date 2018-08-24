@@ -57,6 +57,8 @@
             <!-- One thing that I want to add to the top of this form is the date that the web page is accessed, that way the user cannot change their form and lie. -->
             <form action="thanksVol.html" novalidate="novalidate">
                 <br>
+                <div id="errorDiv"></div>
+                <br>
                 <h3>Please fill out the form below</h3>
                 <!-- First Name Inputbox -->
                 <fieldset id="formBasics">
@@ -70,7 +72,6 @@
                     <!-- Age Spinner -->
                     <label for="age">Please select your age</label>
                     </br>
-<!--                    <input type="number" name="age" id="age" step="1" min="16" max="100" required>-->
                     <select name="age" id="age">
                         <option value="16">16</option>
                         <option value="17">17</option>
@@ -310,7 +311,7 @@
         </div>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="verification.js"></script>
+    <script src="verificationVol.js"></script>
 
 </body>
 

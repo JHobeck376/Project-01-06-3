@@ -10,12 +10,10 @@
     
     fieldWork.html
     offWork.html
-    signUp.html
     volunteer.html
     
     Since the form is extensive, this is how the form file pathways work for the 2 forms:
     
-    signUp.html -> thanksSign.html
     volunteer.html -> fieldWork.html || offWork.html -> thanksVol.html
     
     This JavaScript file had no comments to begin with, so the comments and everything imcompused by the comments are what are new
@@ -31,6 +29,24 @@ if (window.addEventListener){
 // function to set up the form
 function formSetUp() {
     initialResponsive();
+    removeSelectDefault();
+}
+
+// function to make the form responsive
+function initialResponsive() {
+    var offWork = document.getElementById("offWork");
+    var fieldWork = document.getElementById("fieldWork");
+    var currentWork;
+    offWork.style.display = "none";
+    fieldWork.style.display = "none";
+}
+
+// function to remove the select defauts
+function removeSelectDefault() {
+    var removeDefault = document.getElementsByTagName("select");
+    for (var i = 0; i < removeDefault.length; i++){
+        removeDefault[i].selectedIndex = -1;
+    }
 }
 
 function validateEverything() {
@@ -51,6 +67,16 @@ function validateEverything() {
 }
 
 // function to validate the form basics
+
+function formBasics() {
+    var inputElements = document.querySelectorAll("#formBasics input");
+    var currentElement;
+    try {
+        
+    } catch (msg) {
+        
+    }
+}
 
 // these five functions below are in an in progress change. They are being combined into more purposeful functions
 function validateFirstName() {
@@ -183,13 +209,4 @@ function validateRef3Num() {
   }else{
     refNum.setCustomValidity("")
   }
-}
-
-// function to make the form responsive
-function initialResponsive() {
-    var offWork = document.getElementById("offWork");
-    var fieldWork = document.getElementById("fieldWork");
-    var currentWork;
-    offWork.style.display = "none";
-    fieldWork.style.display = "none";
 }
