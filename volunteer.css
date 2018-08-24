@@ -12,6 +12,7 @@ textarea {
   resize: none;
 }
 
+/*
 input#fName:focus:invalid, input#lName:focus:invalid, input#purpose:focus:invalid, input#refs1:focus:invalid, input#refs2:focus:invalid, input#refs3:focus:invalid, input#refs4:focus:invalid, input#refs5:focus:invalid, input#refs6:focus:invalid, input#refs7:focus:invalid  {
   background-color: rgb(240, 128, 128);
 }
@@ -27,6 +28,7 @@ input#fName:focus:valid, input#lName:focus:valid, input#purpose:focus:valid, inp
 input#refs8:focus:valid, input#refs9:focus:valid, input#eContact1:focus:valid, input#eContact2:focus:valid, input#eContact3:focus:valid {
   background-color: rgb(152,251,152);
 }
+*/
 
 button#button1, button#button2, button#button3, input#offWork, input#fieldWork, input#done, input#serviceReq {
   background-color: orange;
