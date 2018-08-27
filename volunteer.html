@@ -175,27 +175,27 @@
                 <!-- References Checkboxes (This is a designated area for three references) -->
                 <h3>Please Enter the Name Phone Number of Three References</h3>
                 <fieldset id="references">
-                   <!-- Ref 1 -->
+                    <!-- Ref 1 -->
                     <div class="reference">
-                    <label for="refs1">Reference 1</label>
-                    <input type="text" name="refs1" id="refs1" placeholder="Sally" required>
-                    <input type="text" name="refs1" id="refs4" placeholder="Jones" required>
-                    <input type="text" name="refs1" id="refs5" pattern="\d{3}-\d{3}-\d{4}$" placeholder="nnn-nnn-nnnn" required>
-                </div>
-                <!-- Ref 2 -->
-                <div class="reference">
-                    <label for="refs2">Reference 2</label>
-                    <input type="text" name="refs2" id="refs2" class="refs3" placeholder="Jim" required>
-                    <input type="text" name="refs2" id="refs6" placeholder="Hobecken" required>
-                    <input type="text" name="refs2" id="refs7" pattern="\d{3}-\d{3}-\d{4}$" placeholder="nnn-nnn-nnnn" required>
-                </div>
-                <!-- Ref 3 -->
-                <div class="reference">
-                    <label for="refs3">Reference 3</label>
-                    <input type="text" name="refs3" id="refs3" class="refs3" placeholder="Mary" required>
-                    <input type="text" name="refs3" id="refs8" placeholder="Smith" required>
-                    <input type="text" name="refs3" id="refs9" pattern="\d{3}-\d{3}-\d{4}$" placeholder="nnn-nnn-nnnn" required>
-                </div>
+                        <label for="refs1">Reference 1</label>
+                        <input type="text" name="refs1" id="refs1" placeholder="Sally" required>
+                        <input type="text" name="refs1" id="refs4" placeholder="Jones" required>
+                        <input type="text" name="refs1" id="refs5" pattern="\d{3}-\d{3}-\d{4}$" placeholder="nnn-nnn-nnnn" required>
+                    </div>
+                    <!-- Ref 2 -->
+                    <div class="reference">
+                        <label for="refs2">Reference 2</label>
+                        <input type="text" name="refs2" id="refs2" class="refs3" placeholder="Jim" required>
+                        <input type="text" name="refs2" id="refs6" placeholder="Hobecken" required>
+                        <input type="text" name="refs2" id="refs7" pattern="\d{3}-\d{3}-\d{4}$" placeholder="nnn-nnn-nnnn" required>
+                    </div>
+                    <!-- Ref 3 -->
+                    <div class="reference">
+                        <label for="refs3">Reference 3</label>
+                        <input type="text" name="refs3" id="refs3" class="refs3" placeholder="Mary" required>
+                        <input type="text" name="refs3" id="refs8" placeholder="Smith" required>
+                        <input type="text" name="refs3" id="refs9" pattern="\d{3}-\d{3}-\d{4}$" placeholder="nnn-nnn-nnnn" required>
+                    </div>
                 </fieldset>
                 <!-- Record Box -->
                 <label for="record">Do you have a criminal record?</label>
@@ -208,24 +208,28 @@
                 <!-- Return Checkbox -->
                 <label for="returnBox">Do you plan on returning?</label>
                 <input type="checkbox" name="returnBox" id="returnBox">
+                <div id="errorDivButtons"></div>
                 <h5>Please select which field of work best interests you.</h5>
                 <!--FieldWork Checkbox-->
-                <div class="fieldWork">
-                    <label for="officeWork">Office Work</label>
-                    <input type="checkbox" name="officeWork" id="returnBox">
-                </div>
-                <!--OfficeWork Checkbox-->
-                <div class="officeWork">
-                    <label for="fieldWork">Field Work</label>
-                    <input type="checkbox" name="fieldWork" id="returnBox">
-                </div>
+                <fieldset id="buttonsFieldset">
+                    <div id="fieldWorkButton">
+                        <label for="fieldWork">Field Work</label>
+                        <input type="checkbox" name="fieldWork" id="returnBox">
+                    </div>
+                    <!--OfficeWork Checkbox-->
+                    <div id="officeWorkButton">
+                        <label for="officeWork">Office Work</label>
+                        <input type="checkbox" name="officeWork" id="returnBox">
+                    </div>
+                </fieldset>
                 <!-- Office Work - Requests of Customers Online, Field - Reply to any requests, are you okay with this, yes or no(examples, groceries, driving, and other requests)  -->
                 <div id="fieldWork">
+                    <div id="errorDivField"></div>
                     <h2>Field Work</h2>
                     <h3>Please Select Yes or No</h3>
                     <!-- Vehicle Radio Button -->
                     <label for="transp">Do you have a mode of transportation that can be used to transport people?</label>
-                    <fieldset>
+                    <fieldset id="fieldWorkOption">
                         <label for="transpYes">Yes</label>
                         <input type="radio" name="transp" id="transpYes" value="yes">
                         <label for="transpNo">No</label>
@@ -246,7 +250,8 @@
                     <br>
                     <br>
                 </div>
-                <div id="offWork">
+                <div id="officeWork">
+                    <div id="errorDivOffice"></div>
                     <h2>Office Work</h2>
                     <h3>Please Check All That Apply</h3>
                     <!-- Office Checkboxes -->

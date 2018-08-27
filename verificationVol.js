@@ -14,7 +14,7 @@
     
     Since the form is extensive, this is how the form file pathways work for the 2 forms:
     
-    volunteer.html -> fieldWork.html || offWork.html -> thanksVol.html
+    volunteer.html -> thanksVol.html
     
     This JavaScript file had no comments to begin with, so the comments and everything imcompused by the comments are what are new
 */
@@ -39,7 +39,7 @@ function formSetUp() {
 
 // function to make the form responsive
 function initialResponsive() {
-    var offWork = document.getElementById("offWork");
+    var offWork = document.getElementById("officeWork");
     var fieldWork = document.getElementById("fieldWork");
     var currentWork;
     offWork.style.display = "none";
@@ -63,20 +63,28 @@ function createEventListeners() {
     } else if (form.attachEvent) {
         form.attachEvent("onsubmit", formValidate);
     }
+    var buttons = document.getElementById("buttonsFieldset");
+    // responsive form
+    if (buttons.addEventListener) {
+        buttons.addEventListener("change", checkboxResponsive, false);
+    } else if (buttons.attachEvent) {
+        buttons.attachEvent("onchange", checkboxResponsive);
+    }
 }
 
 // function to validate the form
 function formValidate(submit) {
-    if(submit.preventDefault){
+    if (submit.preventDefault) {
         submit.preventDefault();
     } else {
         submit.returnValue = false;
     }
     formValidity = true;
-    
+
     formBasics();
     validateReferences();
-    
+    checkboxSubmit();
+
     if (formValidity === true) {
         document.getElementsByTagName("form")[0].submit();
     } else {
@@ -119,7 +127,7 @@ function formBasics() {
         } else {
             currentElement.style.background = "white";
         }
-        
+
         if (fieldsetValidity === false) {
             throw "Please complete all of the form basics";
         } else {
@@ -159,19 +167,19 @@ function validateReferences() {
             }
         }
         // validating the cRecord buttons
-        if (!crButtons[0].checked && !crButtons[1].checked){
-            for (var i = 0; i < buttons; i++){
+        if (!crButtons[0].checked && !crButtons[1].checked) {
+            for (var i = 0; i < buttons; i++) {
                 currentElement = crButtons[i];
                 currentElement.style.outline = "1px solid red";
             }
             fieldsetValidity = false;
         } else {
-            for (var i = 0; i < buttons; i++){
+            for (var i = 0; i < buttons; i++) {
                 currentElement = crButtons[i];
                 currentElement.style.outline = "";
             }
         }
-        
+
         if (fieldsetValidity === false) {
             throw "Please complete all of the reference information";
         } else {
@@ -189,6 +197,102 @@ function validateReferences() {
         errorDiv.innerHTML = msg;
         formValidity = false;
     }
+}
+
+// function for responsiveness with office and field
+function checkboxResponsive() {
+    var fieldButton = document.querySelectorAll("#fieldWorkButton input")[0];
+    var officeButton = document.querySelectorAll("#officeWorkButton input")[0];
+    var errorDiv = document.getElementById("errorDivButtons");
+    var fieldWork = document.getElementById("fieldWork");
+    var officeWork = document.getElementById("officeWork");
+    // responsive if else statements
+    // fieldWork
+    if (fieldButton.checked) {
+        fieldWork.style.display = "block";
+    } else {
+        fieldWork.style.display = "none";
+    }
+    // officeWork
+    if (officeButton.checked) {
+        officeWork.style.display = "block";
+    } else {
+        officeWork.style.display = "none";
+    }
+    // if else for when one is selected then unselected
+    if (!fieldButton.checked && !officeButton.checked) {
+        errorDiv.style.background = "grey";
+        errorDiv.style.color = "red";
+        errorDiv.style.display = "block";
+        errorDiv.style.width = "50%";
+        errorDiv.style.textAlign = "center";
+        errorDiv.style.margin = "0 auto";
+        errorDiv.style.fontSize = "1.4em"
+        errorDiv.innerHTML = "Please select one of these two options";
+        formValidity = false;
+    } else {
+        errorDiv.style.display = "none";
+        errorDiv.innerHTML = "";
+    }
+}
+
+// function to ensure submission for the checkboxes
+function checkboxSubmit() {
+    var fieldButton = document.querySelectorAll("#fieldWorkButton input")[0];
+    var officeButton = document.querySelectorAll("#officeWorkButton input")[0];
+    var errorDiv = document.getElementById("errorDivButtons");
+    var fieldWork = document.getElementById("fieldWork");
+    var officeWork = document.getElementById("officeWork");
+    if (!fieldButton.checked && !officeButton.checked) {
+        errorDiv.style.background = "grey";
+        errorDiv.style.color = "red";
+        errorDiv.style.display = "block";
+        errorDiv.style.width = "50%";
+        errorDiv.style.textAlign = "center";
+        errorDiv.style.margin = "0 auto";
+        errorDiv.style.fontSize = "1.4em"
+        errorDiv.innerHTML = "Please select one of these two options";
+        formValidity = false;
+    } else {
+        errorDiv.style.display = "none";
+        errorDiv.innerHTML = "";
+    }
+}
+
+// fieldWork validation
+function validateFieldWork() {
+    // this has a fieldset with an id of "fieldWorkOption" / an input checkbox with an id of "agree"
+    var optionButtons = document.querySelectorAll("#fieldWorkOption input");
+    var reqCheckbox = document.getElementById("agree");
+    var errorDiv = document.getElementById("errorDivField");
+    if (!reqCheckbox.checked) {
+        errorDiv.style.background = "grey";
+        errorDiv.style.color = "red";
+        errorDiv.style.display = "block";
+        errorDiv.style.width = "50%";
+        errorDiv.style.textAlign = "center";
+        errorDiv.style.margin = "0 auto";
+        errorDiv.style.fontSize = "1.4em"
+        errorDiv.innerHTML = "You must agree to volunteer with ViaReach";
+        formValidity = false;
+    }
+    if (!optionButtons[0].checked && !optionButtons[1].checked) {
+            for (var i = 0; i < buttons; i++) {
+                currentElement = crButtons[i];
+                currentElement.style.outline = "1px solid red";
+            }
+            fieldsetValidity = false;
+        } else {
+            for (var i = 0; i < buttons; i++) {
+                currentElement = crButtons[i];
+                currentElement.style.outline = "";
+            }
+        }
+}
+
+// officeWork validation
+function validateOfficeWork() {
+    
 }
 
 // these functions below are in an in progress change. They are being combined into more purposeful functions. These are what my initial JavaScript was
